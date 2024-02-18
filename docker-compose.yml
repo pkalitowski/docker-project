@@ -1,0 +1,8 @@
+services:
+  nginx-svc:
+    build: 
+      context: ./docker-nginx
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
+ 
