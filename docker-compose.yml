@@ -5,4 +5,13 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 80:80
- 
+    volumes:
+      - web_data:/var/www/html
+  hugo-svc:
+    build:
+      context: ./docker-hugo
+      dockerfile: ./Dockerfile
+    volumes:
+      - web_data:/quickstart/public/
+volumes:
+  web_data:
